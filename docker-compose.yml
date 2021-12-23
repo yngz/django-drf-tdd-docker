@@ -3,9 +3,9 @@ version: '3.8'
 services:
   movies:
     build: .
-    command: python ./src/manage.py runserver 0.0.0.0:8000
+    command: python manage.py runserver 0.0.0.0:8000
     volumes:
-      - ./src/:/code/src/
+      - ./src:/code
     ports:
       - 8009:8000
     env_file:
